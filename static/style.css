@@ -36,7 +36,7 @@ a{
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #3d5af1;
+  background: #4c67f1;
 }
 
 /* Navbar styles start */
@@ -45,7 +45,7 @@ a{
   position: fixed;
   display: flex;
   flex-direction: column;
-  width: 2em;
+  width: 2.2em;
   padding: 1em;
   z-index: 1;
 }
@@ -57,9 +57,9 @@ a{
 }
 
 .navbar .link svg{
-  fill: #3d5af1;
-  min-width: 2em;
-  min-height: 2em;
+  fill: #4c67f1;
+  min-width: 2.2em;
+  min-height: 2.2em;
 }
 
 .navbar span{
@@ -71,15 +71,15 @@ a{
   font-weight: bolder;
   transform: translatex(-14px);
   transition: all 400ms ease;
-  font-size: large;
+  font-size: larger;
 }
 
 .navbar a:hover{
-  width: 9em;
+  width: 10em;
 }
 
 .navbar a:hover span{
-  color: #3d5af1;
+  color: #4c67f1;
   display: inline;
   opacity:1;
   width: auto;
@@ -94,33 +94,37 @@ a{
   height: 100vh;
   display: flex;
   flex-direction: column;
-  margin-left: 2em;
+  margin-left: 4em;
   align-items: center;
   justify-content: center;
-  color: #3d5af1;
+  color: #4c67f1;
+  text-align: center;
 }
 
 .home h1{
   padding: 5px;
   margin: 0;
-  font-size: 7em;
-  -webkit-text-stroke: 3px #3d5af1 ;
+  font-size: 10em;
+  -webkit-text-stroke: 3px #4c67f1 ;
   color: white;
   font-family: 'Open Sans', sans-serif;
-  border: 3px solid #3d5af1;
+  border: 3px solid #4c67f1;
   border-radius: 10px;
-  background: #3d5af1 ;
+  background: #4c67f1 ;
   background: linear-gradient(
     to bottom, 
     #ffffff 0%, 
     #ffffff 55%, 
-    #3d5af1 40%, 
-    #3d5af1 100%
+   #4c67f1 40%, 
+   #4c67f1 100%
   );
 }
 
+
+
 .home h3{
-  margin-top: 90px;
+  font-size: 180%;
+  margin-top: 20px;
 }
 
 /* Home section style end */
@@ -130,10 +134,10 @@ a{
   position: relative;
   display: flex;
   flex-direction: column;
-  margin-left: 2em;
+  margin-left: 4em;
   align-items: center;
   justify-content: center;
-  color: #3d5af1;
+  color: #4c67f1;
 }
 
 .skill .card{
@@ -157,7 +161,7 @@ a{
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   margin: 20px;
   background-color: #ffffff;
-  color: #3d5af1;
+  color: #4c67f1;
   border-radius : 40px;
   align-items: centers;
   justify-content: center;
@@ -172,7 +176,7 @@ a{
 
 .skill h1{
   font-size: 4em;
-  -webkit-text-stroke: 3px #3d5af1 ;
+  -webkit-text-stroke: 3px #4c67f1 ;
   color: white;
   font-family: 'Open Sans', sans-serif;
 }
@@ -203,16 +207,16 @@ a{
   position: relative;
   display: flex;
   flex-direction: column;
-  margin-left: 2em;
+  margin-left: 5em;
   margin-top: 3em;
   align-items: center;
   justify-content: center;
-  color: #3d5af1;
+  color: #4c67f1;
 }
 
 .hobbies h1{
   font-size: 4em;
-  -webkit-text-stroke: 3px #3d5af1 ;
+  -webkit-text-stroke: 3px #4c67f1 ;
   color: white;
   font-family: 'Open Sans', sans-serif;
 }
@@ -231,19 +235,21 @@ a{
 .cardhead{
   display: flex;
   border-radius: 50px;
-  width: 300px;
+  width: 270px;
   align-items: center;
-  color: #3d5af1 ;
+  color: #4c67f1 ;
   background-color: #ffffff;
   margin-bottom: 30px;
 }
 .cardhead svg{
   min-height: 2.5em;
   min-width: 2.5em;
+  max-height: 2.5em;
+  max-width: 2.5em;
   margin: 10px;
   border-radius: 50%;
   background-color: #4c67f1;
-  padding: 10px;
+  padding: 4px;
   fill: white;
 }
 
