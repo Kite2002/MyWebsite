@@ -2,6 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Open+Sans:wght@700&family=Poppins:wght@300&display=swap');
 
+*{
+  box-sizing: border-box;
+}
+
 body{
   margin: 0;
   padding: 0;
@@ -12,6 +16,27 @@ body{
 
 a{
   text-decoration:  none;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #4c67f1;
+  border-radius: 15px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #3d5af1;
 }
 
 /* Navbar styles start */
@@ -111,7 +136,7 @@ a{
   color: #3d5af1;
 }
 
-.card{
+.skill .card{
   display: flex;
   flex-direction: column;
   width: 50%;
@@ -121,9 +146,10 @@ a{
   background-color: #4c67f1;
   color: white;
   border-radius: 40px;
+  align-items: centers;
 }
 
-.card-lang{
+.skill .card-lang{
   display: flex;
   flex-direction: column;
   width: 50%;
@@ -133,6 +159,15 @@ a{
   background-color: #ffffff;
   color: #3d5af1;
   border-radius : 40px;
+  align-items: centers;
+  justify-content: center;
+}
+
+.lang{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 .skill h1{
@@ -144,17 +179,73 @@ a{
 
 .program{
   display: flex;
+  padding: 0%;
   width: 80%;
   font-weight: 400;
+  box-sizing: border-box;
 }
-.lang{
-  align-items: center;
-}
+
+
 .lang svg{
   min-width: 4em;
   min-height: 4em;
+  max-width: 4em;
+  max-height: 4em;
   margin: 10px;
   margin-top: 20px;
 }
 
 /* Skill section style end */
+
+/* hobbies style start */
+
+.hobbies{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-left: 2em;
+  margin-top: 3em;
+  align-items: center;
+  justify-content: center;
+  color: #3d5af1;
+}
+
+.hobbies h1{
+  font-size: 4em;
+  -webkit-text-stroke: 3px #3d5af1 ;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.hobbies .card{
+  width: 80%;
+  padding: 40px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin: 40px;
+  border-radius: 40px;
+  align-items: center;
+  background-color: #4c67f1;
+  color: #ffffff;
+}
+
+.cardhead{
+  display: flex;
+  border-radius: 50px;
+  width: 300px;
+  align-items: center;
+  color: #3d5af1 ;
+  background-color: #ffffff;
+  margin-bottom: 30px;
+}
+.cardhead svg{
+  min-height: 2.5em;
+  min-width: 2.5em;
+  margin: 10px;
+  border-radius: 50%;
+  background-color: #4c67f1;
+  padding: 10px;
+  fill: white;
+}
+
+
+
