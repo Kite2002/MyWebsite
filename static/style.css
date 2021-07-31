@@ -510,7 +510,7 @@ label{
   }
 
   .home ,.skill,.about,.hobbies{
-    min-height: 100vh;
+    min-height: 90vh;
   }
 
   .navbar span{
