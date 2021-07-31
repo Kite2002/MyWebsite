@@ -415,6 +415,9 @@ input{
 }
 
 .button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 0%;
   margin-top: 20px;
   width: 100px;
@@ -440,5 +443,33 @@ label{
 
 /* contact style end */
 
+/* psoted and 404 page styling */
+.posted{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+.message{
+  width: 400px;
+  border-radius: 40px;
+  padding: 20px;
+  text-align: center;
+  background-color: rgb(98, 218, 158);
+  border: 6px solid green;
+  color: rgb(255, 255, 255);
+}
 
+.data{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.data li{
+  margin: 3px;
+  min-width:350px ;
+  padding: 20px;
+  background-color: lightcyan;
+  border-radius: 40px;
+}
