@@ -5,6 +5,17 @@
 *{
   box-sizing: border-box;
 }
+html{
+  scroll-behavior: smooth;
+}
+
+.kite{
+  color: #4c67f1;
+  padding: 2px;
+  margin: 10px;
+  background-color: #ffffff;
+  border-radius: 20px;
+}
 
 body{
   margin: 0;
@@ -263,6 +274,7 @@ a{
   color: #4c67f1;
   padding: 20px;
   border-radius:40px ;
+  margin-top: 3em;
 }
 
 .social svg{
