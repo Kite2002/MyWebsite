@@ -465,14 +465,17 @@ label{
 
 @media screen and (max-width : 1024px) {
 
+  * {
+    -webkit-tap-highlight-color: transparent;
+}
+
   .navbar{
     bottom: 0;
     width: 100vw;
-    height: 5rem;
     flex-direction: row;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    height: 3em;
+    height: 4em;
 
   }
 
@@ -490,6 +493,8 @@ label{
     box-sizing: content-box;
     border-radius: 50%;
     padding: 6px;
+    min-height: 2.4em;
+    min-width: 2.4em;
   }
 
   .navbar a:active svg{
@@ -501,7 +506,6 @@ label{
     height: auto;
     margin-left: 0;
     margin-bottom: 2em;
-    margin-top: 2em;
     align-items: center;
   }
 
