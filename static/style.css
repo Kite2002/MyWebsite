@@ -88,18 +88,6 @@ a{
   mix-blend-mode: lighten;
 }
 
-.navbar a:hover{
-  width: 10em;
-}
-
-.navbar a:hover span{
-  color: #4c67f1;
-  display: inline;
-  opacity:1;
-  width: auto;
-  transform: translatey(3px);
-  transform: translatex(0);
-}
 /* Navbar style end */
 
 /* Home section style start */
@@ -472,4 +460,183 @@ label{
   padding: 20px;
   background-color: lightcyan;
   border-radius: 40px;
+}
+
+
+@media screen and (max-width : 1024px) {
+
+  .navbar{
+    bottom: 0;
+    width: 100vw;
+    height: 5rem;
+    flex-direction: row;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    height: 3em;
+
+  }
+
+  .navbar a{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+    justify-content: center;
+  }
+
+  .navbar svg{
+    box-sizing: content-box;
+    border-radius: 50%;
+    padding: 6px;
+  }
+
+  .navbar a:active svg{
+    fill: #324399;
+    background-color: #d6d6d6;
+  }
+  
+  .home ,.skill,.about,.hobbies,.contact{
+    height: auto;
+    margin-left: 0;
+    margin-bottom: 2em;
+    margin-top: 2em;
+    align-items: center;
+  }
+
+  .home ,.skill,.about,.hobbies{
+    min-height: 100vh;
+  }
+
+  .navbar span{
+    display: none;
+  }
+
+  .skill .card, .skill .card-lang{
+    width: 95%;
+    margin: 0;
+    margin-bottom:1em ;
+    padding: 20px;
+    
+  }
+
+  .card-lang h2{
+    display: none;
+  }
+
+ 
+  .skill .card-lang svg{
+    min-width: 2.3em;
+    min-height:2.3em;
+    max-width: 2.3em;
+    max-height: 2.3em;
+  }
+
+
+  .program{
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 3em;
+    align-items: center;
+  }
+
+  .lang{
+    justify-content: space-evenly;
+  }
+
+  form{
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .input,.textarea{
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .c1,.c2{
+    margin-left: 0;
+    margin-right: 0;
+    width: 95%;
+  }
+  .button{
+    transform: translateX(0);
+  }
+
+  .container-about{
+    flex-direction: column;
+  }
+
+  .container-about .text, .container-about .about-image{
+    flex-direction: column;
+    transform: translate(0 , 0);
+  }
+
+  .container-about .text{
+    padding: 20px;
+    width: 90%;
+  }
+
+  .about-image{
+    height: 10rem;
+    width: 10rem;
+    border: 2px solid #4c67f1;
+    margin-top: 1em;
+    transform: translateY(-40px);
+    }
+
+    .social{
+      margin: 0;
+      margin-top: 2em;
+      width: 90%;
+      align-items: center;
+      justify-content: space-evenly;
+      padding: 5px;
+    }
+
+    .social h3{
+      display: none;
+    }
+
+    .social svg{
+      max-width: 3em;
+      min-width: 3em;
+      max-height: 3em;
+      min-height: 3em;
+      margin-left: 0;
+    }
+
+    .about h1{
+      -webkit-text-stroke: 2px #4c67f1;
+    }
+    .hobbies .card{
+      width: 95%;
+      margin-left: 0px;
+      margin-right: 0px;
+      padding: 20px;
+    }
+
+    .hobbies .cardhead{
+      width: 100%;
+    }
+  
+}
+
+@media screen and (min-width : 1024px){
+  .navbar a:hover{
+    width: 10em;
+  }
+  
+  .navbar a:hover span{
+    color: #4c67f1;
+    display: inline;
+    opacity:1;
+    width: auto;
+    transform: translatey(3px);
+    transform: translatex(0);
+  }
+
 }
