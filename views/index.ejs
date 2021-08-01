@@ -5,6 +5,11 @@
   <body>
     <%- include('./templates/navbar.ejs') %>
       <div id="home" class="home">
+        <% if(msg != ""){ %> 
+          <div class= <%= cls %>>
+            <h4><%= msg %> </h4>
+          </div>
+          <% } %> 
         <h1 class="mainheading">
           Hi
         </h1>
@@ -157,7 +162,11 @@
           </form>
         </div>
       </div>
-
+      <script>
+        if ( window.history.replaceState ) {
+          window.history.replaceState( null, null, window.location.href );
+        }
+        </script>
   </body>
 
 </html>

@@ -3,20 +3,18 @@ const ejs = require('ejs');
 const env = require('dotenv').config();
 const mongoose = require('mongoose');
 const Form = require('./model/contactform');
+const nodemailer = require("nodemailer");
 
 const dburi = process.env.DATABASE_LINK;
 
 //connect to database and listen to port
 mongoose
-  .connect(dburi,{useNewUrlParser:true ,useUnifiedTopology:true})
-  .then((result) =>{
-    console.log('Connected to DB')
-    app.listen(process.env.PORT,()=>{
-      console.log('listening to port 2100')
+  .connect(dburi, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then((result) => {
+    app.listen(process.env.PORT, () => {
     });
   })
-  .catch((err)=>{
-    console.log(err);
+  .catch((err) => {
   })
 
 
@@ -28,25 +26,56 @@ app.set('view engine', 'ejs');
 
 //STATIC FILES
 app.use(express.static("static"));
-//middleware to parse data
-app.use(express.urlencoded({extended:true}));
 
-app.get("/",(req,res)=>{
-  res.render("index",{title:'Home'});
+//middleware to parse data
+app.use(express.urlencoded({ extended: true }));
+
+app.get("/", (req, res) => {
+  res.render("index", { title: 'Home', msg: "" });
 })
 
-
-
-
 //store messages in database
-app.post("/" , (req,res)=>{
+app.post("/", (req, res) => {
   const form = new Form(req.body);
-  form.save()
-    .then((result)=>{
-      res.render("posted",{title:'Message Recived' , data : result})
+  async function main() {
+
+    let transporter = nodemailer.createTransport({
+      service: 'gmail',
+      auth: {
+        user: process.env.EUSER, // generated ethereal user
+        pass: process.env.EKEY, // generated ethereal password
+      },
+    });
+
+    let info = await transporter.sendMail({
+      from: `"Debabrata" ${process.env.EUSER}`, // sender address
+      to: `${req.body.mail}`, // list of receivers
+      subject: "Thanks for contacting", // Subject line
+      text: "", // plain text body
+      html: `<font color="white"><h4>${req.body.name} Thank you for visiting my website and leaving a message.<br>Your Message details are:<br>
+      <ul>
+      <li>From :<br> ${req.body.name} </li><br>
+      <li>Mail :<br> ${req.body.mail} </li><br>
+      <li>Subject :<br>${req.body.subject}</li><br>
+      <li>Message :<br> ${req.body.message} </li><br>
+      </ul></h4></font>`, // html body
+    }).then(()=>{
+      res.render("index", { title: 'Home', msg: 'Message recived' , cls: 'success' })
+      form.save()
+      .then((result) => {
+      })
+      .catch(err=>{
+      })
     })
-    .catch(err=>{
-      console.log(err);
+    .catch(err => {
+      res.render("index", { title: 'Home', msg: 'Invalid Email' , cls: 'error' });
     })
+    
+
+  }
+
+
+  main().catch(); 
+
 })
 

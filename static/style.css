@@ -17,6 +17,66 @@ html{
   border-radius: 20px;
 }
 
+.success{
+  display: flex;
+  position: fixed;
+  top: 10px;
+  background-color: rgba(68, 255, 124, 0.658);
+  border-color: rgb(13, 65, 36);
+  text-align: center;
+  color: #ffffff;
+  align-items: center;
+  justify-content: center;
+  width: 240px;
+  margin: auto;
+  border-radius: 40px;
+  height: 40px;
+
+  animation:signup-response 0.5s 1;
+    -webkit-animation:signup-response 0.5s 1;
+    animation-fill-mode: forwards;
+    animation-delay:4s;
+    -webkit-animation-delay:1s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+
+}
+
+.error{
+  display: flex;
+  position: fixed;
+  top: 10px;
+  background-color: rgba(255, 68, 68, 0.658);
+  border-color: rgb(65, 13, 13);
+  text-align: center;
+  color: #ffffff;
+  align-items: center;
+  justify-content: center;
+  width: 240px;
+  margin: auto;
+  border-radius: 40px;
+  height: 40px;
+
+  animation:signup-response 0.5s 1;
+    -webkit-animation:signup-response 0.5s 1;
+    animation-fill-mode: forwards;
+    animation-delay:4s;
+    -webkit-animation-delay:1s; /* Safari and Chrome */
+    -webkit-animation-fill-mode: forwards;
+
+}
+
+
+
+@keyframes signup-response{
+  from {opacity :1;}
+  to {opacity :0;}
+}
+
+@-webkit-keyframes signup-response{
+  from {opacity :1;}
+  to {opacity :0;}
+}
+
 body{
   margin: 0;
   padding: 0;
@@ -431,36 +491,7 @@ label{
 
 /* contact style end */
 
-/* psoted and 404 page styling */
-.posted{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 
-.message{
-  width: 400px;
-  border-radius: 40px;
-  padding: 20px;
-  text-align: center;
-  background-color: rgb(98, 218, 158);
-  border: 6px solid green;
-  color: rgb(255, 255, 255);
-}
-
-.data{
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.data li{
-  margin: 3px;
-  min-width:350px ;
-  padding: 20px;
-  background-color: lightcyan;
-  border-radius: 40px;
-}
 
 
 @media screen and (max-width : 1024px) {
