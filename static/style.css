@@ -161,6 +161,14 @@ a{
   text-align: center;
 }
 
+.home .img{
+  background-image: url("/svg/arrow.svg");
+  background-position: center center;
+  background-size: cover;
+  height: 2em;
+  width: 2em;
+}
+
 .home h1{
   padding: 5px;
   margin: 0;
