@@ -494,6 +494,10 @@ label{
 
 @media screen and (max-width : 1024px) {
 
+  svg {
+    shape-rendering: optimizeSpeed;
+  }
+
   * {
     -webkit-tap-highlight-color: transparent;
 }
@@ -663,7 +667,7 @@ label{
   html{
     scroll-behavior: smooth;
   }
-  
+
   .navbar a:hover{
     width: 10em;
   }
