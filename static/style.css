@@ -5,9 +5,7 @@
 *{
   box-sizing: border-box;
 }
-html{
-  scroll-behavior: smooth;
-}
+
 
 .kite{
   color: #4c67f1;
@@ -661,6 +659,11 @@ label{
 }
 
 @media screen and (min-width : 1024px){
+
+  html{
+    scroll-behavior: smooth;
+  }
+  
   .navbar a:hover{
     width: 10em;
   }
