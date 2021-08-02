@@ -52,7 +52,7 @@ app.post("/", (req, res) => {
       to: `${req.body.mail}`, // list of receivers
       subject: "Thanks for contacting", // Subject line
       text: "", // plain text body
-      html: `<font color="white"><h4>${req.body.name} Thank you for visiting my website and leaving a message.<br>Your Message details are:<br>
+      html: `<font><h4>${req.body.name} Thank you for visiting my website and leaving a message.<br>Your Message details are:<br>
       <ul>
       <li>From :<br> ${req.body.name} </li><br>
       <li>Mail :<br> ${req.body.mail} </li><br>
