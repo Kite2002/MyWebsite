@@ -7,19 +7,26 @@ const nodemailer = require("nodemailer");
 
 const dburi = process.env.DATABASE_LINK;
 
-//connect to database and listen to port
+//express app
+const app = express();
+// connect to database and listen to port
 mongoose
   .connect(dburi, { useNewUrlParser: true, useUnifiedTopology: true })
   .then((result) => {
     app.listen(process.env.PORT, () => {
+      console.log(process.env.PORT)
     });
   })
   .catch((err) => {
+    console.log(err)
   })
 
+// app.listen(process.env.PORT, () => {
+//   console.log(process.env.PORT)
+// });
 
-//express app
-const app = express();
+
+
 
 //view engine
 app.set('view engine', 'ejs');
