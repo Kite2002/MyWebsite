@@ -9,7 +9,16 @@ const nodemailer = require("nodemailer");
 //express app
 const app = express();
 // connect to database and listen to port
-
+// mongoose
+//   .connect(dburi, { useNewUrlParser: true, useUnifiedTopology: true })
+//   .then((result) => {
+//     app.listen(process.env.PORT, () => {
+//       console.log(process.env.PORT)
+//     });
+//   })
+//   .catch((err) => {
+//     console.log(err)
+//   })
 
 // app.listen(process.env.PORT, () => {
 //   console.log(process.env.PORT)
@@ -31,7 +40,7 @@ app.get("/", (req, res) => {
   res.render("index", { title: 'Home', msg: "" });
 })
 
-//store messages in database
+// store messages in database
 app.post("/", (req, res) => {
   async function main() {
     // let transporter = nodemailer.createTransport({
